@@ -50,9 +50,19 @@
          justify-content: center;
       }
     </style>
-    <button onclick="change()">Change the background</button>
+    <button style="z-index:3;" onclick="change()">Change the background</button>
     <script>
-      var vid1 = document.getElementById('liquid');
+      function change() {
+        var vid1 = document.getElementById('liquid');
+        var vid2 = document.getElementById('liquid2');
+        if vid1.visibility == 'hidden' {
+          vid1.visibility = 'visible';
+          vid2.visibility = 'hidden';
+        } else {
+          vid1.visibility = 'hidden';
+          vid2.visibility = 'visible';
+        }
+      }
     </script>
   </body>
 </html>
