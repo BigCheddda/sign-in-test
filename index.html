@@ -2,12 +2,25 @@
   <title>Sign In</title>
   <body style="background-color:blue;">
     <div class="video-wrapper">
-      <video id="background" playsinline autoplay muted loop>
+      <video id="liquid" playsinline autoplay muted loop>
         <source src="liquid.webm" type="video/webm">
       </video>
     </div>
+    <div class="video-wrapper">
+      <video style="visibility:hidden;" id="liquid2" playsinline autoplay muted loop>
+        <source src="liquid2.mp4" type="video/mp4">
+      </video>
+    </div>
     <style>
-      #background {
+      #liquid {
+        position:absolute;
+        top:0;
+        left:0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+      #liquid2 {
         position:absolute;
         top:0;
         left:0;
@@ -37,6 +50,9 @@
          justify-content: center;
       }
     </style>
-    <h1><FONT COLOR=red>
+    <button onclick="change()">Change the background</button>
+    <script>
+      var vid1 = document.getElementById('liquid');
+    </script>
   </body>
 </html>
